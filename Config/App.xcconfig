@@ -1,0 +1,12 @@
+//
+//  App.xcconfig
+//  PruebaTecnicaGapsi
+//
+//  Configuración base del target de la app.
+//  La API key no está escrita en el código: se toma de Secrets.xcconfig
+//  y llega a la app a través del Info.plist (clave RAPIDAPI_KEY).
+//
+
+RAPIDAPI_KEY =
+
+#include? "Secrets.xcconfig"
