@@ -6,14 +6,33 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		7A0000000000000000000010 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6458401E30630D2C00198ED2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6458402530630D2C00198ED2;
+			remoteInfo = PruebaTecnicaGapsi;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		6458402630630D2C00198ED2 /* PruebaTecnicaGapsi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaTecnicaGapsi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A0000000000000000000001 /* PruebaTecnicaGapsiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PruebaTecnicaGapsiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A0000000000000000000002 /* App.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = App.xcconfig; sourceTree = "<group>"; };
+		7A0000000000000000000003 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		7A0000000000000000000004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		6458402830630D2C00198ED2 /* PruebaTecnicaGapsi */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PruebaTecnicaGapsi;
+			sourceTree = "<group>";
+		};
+		7A0000000000000000000020 /* PruebaTecnicaGapsiTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PruebaTecnicaGapsiTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +45,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A0000000000000000000030 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		6458401D30630D2C00198ED2 = {
 			isa = PBXGroup;
 			children = (
+				7A0000000000000000000040 /* Config */,
 				6458402830630D2C00198ED2 /* PruebaTecnicaGapsi */,
+				7A0000000000000000000020 /* PruebaTecnicaGapsiTests */,
 				6458402730630D2C00198ED2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +69,19 @@
 			isa = PBXGroup;
 			children = (
 				6458402630630D2C00198ED2 /* PruebaTecnicaGapsi.app */,
+				7A0000000000000000000001 /* PruebaTecnicaGapsiTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7A0000000000000000000040 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				7A0000000000000000000002 /* App.xcconfig */,
+				7A0000000000000000000003 /* Secrets.xcconfig */,
+				7A0000000000000000000004 /* Info.plist */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,6 +109,29 @@
 			productReference = 6458402630630D2C00198ED2 /* PruebaTecnicaGapsi.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7A0000000000000000000050 /* PruebaTecnicaGapsiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A0000000000000000000060 /* Build configuration list for PBXNativeTarget "PruebaTecnicaGapsiTests" */;
+			buildPhases = (
+				7A0000000000000000000031 /* Sources */,
+				7A0000000000000000000030 /* Frameworks */,
+				7A0000000000000000000032 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A0000000000000000000011 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7A0000000000000000000020 /* PruebaTecnicaGapsiTests */,
+			);
+			name = PruebaTecnicaGapsiTests;
+			packageProductDependencies = (
+			);
+			productName = PruebaTecnicaGapsiTests;
+			productReference = 7A0000000000000000000001 /* PruebaTecnicaGapsiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -83,12 +145,17 @@
 					6458402530630D2C00198ED2 = {
 						CreatedOnToolsVersion = 26.6;
 					};
+					7A0000000000000000000050 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = 6458402530630D2C00198ED2;
+					};
 				};
 			};
 			buildConfigurationList = 6458402130630D2C00198ED2 /* Build configuration list for PBXProject "PruebaTecnicaGapsi" */;
-			developmentRegion = en;
+			developmentRegion = es;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				es,
 				en,
 				Base,
 			);
@@ -100,12 +167,20 @@
 			projectRoot = "";
 			targets = (
 				6458402530630D2C00198ED2 /* PruebaTecnicaGapsi */,
+				7A0000000000000000000050 /* PruebaTecnicaGapsiTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6458402430630D2C00198ED2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A0000000000000000000032 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +197,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A0000000000000000000031 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A0000000000000000000011 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6458402530630D2C00198ED2 /* PruebaTecnicaGapsi */;
+			targetProxy = 7A0000000000000000000010 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6458402F30630D2D00198ED2 /* Debug */ = {
@@ -177,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -234,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -246,6 +336,7 @@
 		};
 		6458403230630D2D00198ED2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A0000000000000000000002 /* App.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -253,9 +344,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -266,17 +357,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = klauss.PruebaTecnicaGapsi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		6458403330630D2D00198ED2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A0000000000000000000002 /* App.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -284,9 +374,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -297,12 +387,46 @@
 				PRODUCT_BUNDLE_IDENTIFIER = klauss.PruebaTecnicaGapsi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7A0000000000000000000061 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klauss.PruebaTecnicaGapsiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PruebaTecnicaGapsi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PruebaTecnicaGapsi";
+			};
+			name = Debug;
+		};
+		7A0000000000000000000062 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = klauss.PruebaTecnicaGapsiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PruebaTecnicaGapsi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PruebaTecnicaGapsi";
 			};
 			name = Release;
 		};
@@ -323,6 +447,15 @@
 			buildConfigurations = (
 				6458403230630D2D00198ED2 /* Debug */,
 				6458403330630D2D00198ED2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A0000000000000000000060 /* Build configuration list for PBXNativeTarget "PruebaTecnicaGapsiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A0000000000000000000061 /* Debug */,
+				7A0000000000000000000062 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

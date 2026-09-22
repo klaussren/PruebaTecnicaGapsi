@@ -1,0 +1,256 @@
+{
+  "sourceLanguage" : "es",
+  "strings" : {
+    "Algo salió mal" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Something went wrong"
+          }
+        }
+      }
+    },
+    "Borrar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear"
+          }
+        }
+      }
+    },
+    "Buscando productos..." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Searching products..."
+          }
+        }
+      }
+    },
+    "Buscar productos (ej. nintendo)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search products (e.g. nintendo)"
+          }
+        }
+      }
+    },
+    "Búsquedas recientes" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recent searches"
+          }
+        }
+      }
+    },
+    "Desde %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "From %@"
+          }
+        }
+      }
+    },
+    "El servicio no está disponible en este momento. Intenta más tarde." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The service is not available right now. Please try again later."
+          }
+        }
+      }
+    },
+    "El servicio rechazó la consulta. Revisa que la API key esté configurada en Config/Secrets.xcconfig." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The service rejected the request. Make sure the API key is set in Config/Secrets.xcconfig."
+          }
+        }
+      }
+    },
+    "Escribe algo para buscar." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type something to search."
+          }
+        }
+      }
+    },
+    "Escribe lo que buscas, por ejemplo \"nintendo\", \"sony\" o \"computer\". Tus búsquedas aparecerán aquí." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type what you're looking for, for example \"nintendo\", \"sony\" or \"computer\". Your searches will appear here."
+          }
+        }
+      }
+    },
+    "No encontramos productos para \"%@\". Prueba con otra palabra en inglés o una marca." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We couldn't find products for \"%@\". Try another word in English or a brand name."
+          }
+        }
+      }
+    },
+    "No hay más resultados" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No more results"
+          }
+        }
+      }
+    },
+    "No pudimos leer la respuesta del servicio. Intenta de nuevo." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We couldn't read the service response. Please try again."
+          }
+        }
+      }
+    },
+    "No se pudo cargar esa página de resultados." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "That page of results couldn't be loaded."
+          }
+        }
+      }
+    },
+    "Ocurrió un error inesperado. Intenta de nuevo." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An unexpected error occurred. Please try again."
+          }
+        }
+      }
+    },
+    "Parece que no tienes conexión a internet. Revisa tu conexión e intenta de nuevo." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It looks like you're not connected to the internet. Check your connection and try again."
+          }
+        }
+      }
+    },
+    "Precio no disponible" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Price not available"
+          }
+        }
+      }
+    },
+    "Productos" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Products"
+          }
+        }
+      }
+    },
+    "Reintentar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retry"
+          }
+        }
+      }
+    },
+    "Resultados para \"%@\"" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Results for \"%@\""
+          }
+        }
+      }
+    },
+    "Se alcanzó el límite de consultas del servicio. Espera un momento e intenta de nuevo." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The service request limit was reached. Wait a moment and try again."
+          }
+        }
+      }
+    },
+    "Sin conexión" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No connection"
+          }
+        }
+      }
+    },
+    "Sin conexión a internet" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No internet connection"
+          }
+        }
+      }
+    },
+    "Sin resultados" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No results"
+          }
+        }
+      }
+    },
+    "¡Bienvenido!" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome!"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

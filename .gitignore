@@ -15,6 +15,3 @@ build/
 # Swift Package Manager
 .build/
 .swiftpm/
-
-# Secretos locales (API keys)
-Config/Secrets.xcconfig
