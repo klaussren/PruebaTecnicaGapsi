@@ -45,7 +45,7 @@ extension WalmartProductDTO {
             price: resolved?.amount,
             isStartingPrice: resolved?.isStartingPrice ?? false,
             currencyCode: priceInfo?.priceDetails?.currency ?? "USD",
-            thumbnailURL: (imageInfo?.thumbnailUrl ?? image).flatMap(URL.init(string:))
+            thumbnailURL: (imageInfo?.thumbnailUrl ?? image).flatMap(Self.thumbnailURL(from:))
         )
     }
 
@@ -65,6 +65,27 @@ extension WalmartProductDTO {
             return (Decimal(price), false)
         }
         return nil
+    }
+
+    /// Tamaño en píxeles de la miniatura: la fila la muestra a 80 pt, que en pantallas @3x son 240 px.
+    static let thumbnailSize = 240
+
+    /// Walmart manda la foto en tamaño completo (~2000x2000, cerca de 200 KB).
+    /// Con `odnHeight`/`odnWidth` su servidor regresa una miniatura de ~10 KB, que carga mucho más rápido.
+    /// Si la URL ya traía esos parámetros se reemplazan; las URLs de otros dominios se dejan igual.
+    static func thumbnailURL(from urlString: String) -> URL? {
+        guard var components = URLComponents(string: urlString) else { return nil }
+        guard components.host?.hasSuffix("walmartimages.com") == true else { return components.url }
+
+        let resizeParameters = ["odnHeight", "odnWidth", "odnBg"]
+        var queryItems = (components.queryItems ?? []).filter { !resizeParameters.contains($0.name) }
+        queryItems += [
+            URLQueryItem(name: "odnHeight", value: String(thumbnailSize)),
+            URLQueryItem(name: "odnWidth", value: String(thumbnailSize)),
+            URLQueryItem(name: "odnBg", value: "FFFFFF")
+        ]
+        components.queryItems = queryItems
+        return components.url
     }
 
     /// Busca en `priceLines` el primer valor con la key indicada y lo convierte a `Decimal`.

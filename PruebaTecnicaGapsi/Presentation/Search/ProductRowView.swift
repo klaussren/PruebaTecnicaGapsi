@@ -68,3 +68,12 @@ struct ProductRowView: View {
         return product.isStartingPrice ? String(localized: "Desde \(amount)") : amount
     }
 }
+
+#if DEBUG
+#Preview("Filas de producto") {
+    List(PreviewData.products) { product in
+        ProductRowView(product: product)
+    }
+    .listStyle(.insetGrouped)
+}
+#endif

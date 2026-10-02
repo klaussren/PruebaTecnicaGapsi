@@ -22,3 +22,9 @@ struct OfflineBannerView: View {
         .accessibilityElement(children: .combine)
     }
 }
+
+#if DEBUG
+#Preview {
+    OfflineBannerView()
+}
+#endif

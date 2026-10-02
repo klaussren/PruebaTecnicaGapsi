@@ -73,3 +73,13 @@ struct SearchHistoryView: View {
         .listStyle(.insetGrouped)
     }
 }
+
+#if DEBUG
+#Preview("Con historial") {
+    SearchHistoryView(terms: PreviewData.history, onSelect: { _ in }, onClear: {})
+}
+
+#Preview("Sin historial") {
+    SearchHistoryView(terms: [], onSelect: { _ in }, onClear: {})
+}
+#endif
