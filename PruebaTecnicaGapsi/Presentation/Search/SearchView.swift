@@ -139,3 +139,31 @@ struct SearchView: View {
         .padding(.vertical, 12)
     }
 }
+
+#if DEBUG
+#Preview("Historial") {
+    SearchView(viewModel: PreviewData.makeSearchViewModel())
+}
+
+#Preview("Bienvenida") {
+    SearchView(viewModel: PreviewData.makeSearchViewModel(history: []))
+}
+
+#Preview("Resultados") {
+    let viewModel = PreviewData.makeSearchViewModel()
+    viewModel.selectHistoryTerm("nintendo")
+    return SearchView(viewModel: viewModel)
+}
+
+#Preview("Sin resultados") {
+    let viewModel = PreviewData.makeSearchViewModel(products: [])
+    viewModel.selectHistoryTerm("zzzz")
+    return SearchView(viewModel: viewModel)
+}
+
+#Preview("Sin conexión") {
+    let viewModel = PreviewData.makeSearchViewModel(isConnected: false)
+    viewModel.selectHistoryTerm("sony")
+    return SearchView(viewModel: viewModel)
+}
+#endif
