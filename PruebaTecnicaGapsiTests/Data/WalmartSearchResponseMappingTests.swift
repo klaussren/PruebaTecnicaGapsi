@@ -28,14 +28,14 @@ final class WalmartSearchResponseMappingTests: XCTestCase {
         XCTAssertEqual(product.title, "Restored Nintendo Wii Console, White (Refurbished)")
         XCTAssertEqual(product.price, Decimal(string: "69.99"))
         XCTAssertEqual(product.currencyCode, "USD")
-        XCTAssertEqual(product.thumbnailURL?.absoluteString, "https://i5.walmartimages.com/asr/wii.jpeg")
+        XCTAssertEqual(product.thumbnailURL?.absoluteString, "https://i5.walmartimages.com/asr/wii.jpeg?odnHeight=240&odnWidth=240&odnBg=FFFFFF")
     }
 
     func test_toDomain_withoutPriceLines_fallsBackToRoundedPriceAndImage() throws {
         let product = try XCTUnwrap(decode(Self.sampleJSON).toDomain(requestedPage: 1).products.last)
 
         XCTAssertEqual(product.price, Decimal(499))
-        XCTAssertEqual(product.thumbnailURL?.absoluteString, "https://i5.walmartimages.com/seo/switch2.jpeg")
+        XCTAssertEqual(product.thumbnailURL?.absoluteString, "https://i5.walmartimages.com/seo/switch2.jpeg?odnHeight=240&odnWidth=240&odnBg=FFFFFF")
     }
 
     /// Caso real de la API: gift card "PlayStation VGC $10-$250" con price = 0 y solo LOW_PRICE.
@@ -63,6 +63,20 @@ final class WalmartSearchResponseMappingTests: XCTestCase {
 
         XCTAssertEqual(product.price, Decimal(string: "109.99"))
         XCTAssertFalse(product.isStartingPrice)
+    }
+
+    /// Si la URL ya trae parámetros de tamaño (180), se reemplazan por los nuestros sin duplicarlos.
+    func test_thumbnailURL_replacesExistingSizeParameters() {
+        let url = WalmartProductDTO.thumbnailURL(from: "https://i5.walmartimages.com/seo/n64.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF")
+
+        XCTAssertEqual(url?.absoluteString, "https://i5.walmartimages.com/seo/n64.jpeg?odnHeight=240&odnWidth=240&odnBg=FFFFFF")
+    }
+
+    /// Las imágenes que no son de Walmart no se modifican.
+    func test_thumbnailURL_withOtherDomain_keepsURLUnchanged() {
+        let url = WalmartProductDTO.thumbnailURL(from: "https://example.com/image.jpg")
+
+        XCTAssertEqual(url?.absoluteString, "https://example.com/image.jpg")
     }
 
     func test_toDomain_withNoResults_returnsEmptyPageWithoutMorePages() throws {

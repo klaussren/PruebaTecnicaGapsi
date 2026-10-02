@@ -40,3 +40,23 @@ struct StateMessageView: View {
         .padding(32)
     }
 }
+
+#if DEBUG
+#Preview("Con botón") {
+    StateMessageView(
+        systemImage: "exclamationmark.triangle",
+        title: "Algo salió mal",
+        message: "El servicio no está disponible en este momento. Intenta más tarde.",
+        actionTitle: "Reintentar",
+        action: {}
+    )
+}
+
+#Preview("Sin botón") {
+    StateMessageView(
+        systemImage: "magnifyingglass",
+        title: "Sin resultados",
+        message: "No encontramos productos para \"zzzz\"."
+    )
+}
+#endif

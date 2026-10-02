@@ -51,9 +51,10 @@ final class SearchViewModel: ObservableObject {
     /// si el usuario ya empezó a escribir otra cosa sin darle buscar).
     private(set) var currentKeyword = ""
 
-    /// Cuántos productos antes del final empezamos a pedir la siguiente página,
-    /// para que al usuario casi no le toque ver el indicador de carga.
-    private let prefetchThreshold = 5
+    /// Cuántos productos antes del final empezamos a pedir la siguiente página.
+    /// Cada página trae ~40 productos y la API tarda 1-3 s; con 15 la carga empieza
+    /// con suficiente margen para que el indicador casi no se vea al hacer scroll rápido.
+    private let prefetchThreshold = 15
 
     /// Indica si quedan páginas por cargar; la vista lo usa para mostrar "No hay más resultados".
     @Published private(set) var hasMorePages = false
